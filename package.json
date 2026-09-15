@@ -1,6 +1,6 @@
 {
   "name": "@flora-ai/eve-extension",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "FLORA for eve agents: the hosted FLORA MCP server plus the tested skills that drive it.",
   "keywords": [
     "eve",
