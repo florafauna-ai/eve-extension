@@ -1,0 +1,66 @@
+{
+  "name": "@flora-ai/eve-extension",
+  "version": "0.10.0",
+  "description": "FLORA for eve agents: the hosted FLORA MCP server plus the tested skills that drive it.",
+  "license": "Apache-2.0",
+  "homepage": "https://flora.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florafauna-ai/eve-extension.git"
+  },
+  "keywords": [
+    "eve",
+    "eve-extension",
+    "flora",
+    "mcp",
+    "image-generation",
+    "video-generation"
+  ],
+  "type": "module",
+  "eve": {
+    "extension": {
+      "source": "./extension",
+      "dist": "./dist/extension"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+    },
+    "./tools": {
+      "types": "./dist/tools/index.d.ts",
+      "default": "./dist/tools/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "eve extension build && node ./scripts/ensure-tools-declaration.mjs",
+    "prepublishOnly": "pnpm build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vercel/connect": "2.0.2",
+    "zod": "4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.11",
+    "ai": "7.0.93",
+    "eve": "0.53.1",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "eve": "0.53.x"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=24"
+  }
+}
