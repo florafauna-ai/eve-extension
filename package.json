@@ -44,8 +44,8 @@
     "format:fix": "oxfmt"
   },
   "dependencies": {
-    "@vercel/connect": "2.0.2",
-    "zod": "4.1.13"
+    "@vercel/connect": "^2.0.2",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@types/node": "^20.17.11",
@@ -56,7 +56,7 @@
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
-    "eve": "0.53.x"
+    "eve": "*"
   },
   "engines": {
     "node": ">=24"
